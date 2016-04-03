@@ -18,7 +18,7 @@ The cubic b-spline interpolation routines are by Danny Ruijters, and adapted her
 
 Input command line arguments:
 
-0) Program (self), not part of the command line arguments
+0) Program (self), not part of the command line arguments<br>
 1) GPU Number
 2) Interpolation Resolution Multiplier
 3) Raster Maximum Data Value
