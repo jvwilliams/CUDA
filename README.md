@@ -17,6 +17,10 @@ The cubic b-spline interpolation routines are by Danny Ruijters, and adapted her
 this application. His work and further information may be found at 
 http://www.dannyruijters.nl/cubicinterpolation/ .
 
+The program also makes use of the GDAL API. Documentation may be found at 
+http://www.gdal.org/gdal_tutorial.html , and more general documentation for GDAL 
+may be found here: http://www.gdal.org/index.html
+
 gpuappmf.c : the main c source file.<br>
 gpuapp.cu:    the CUDA source file
 
@@ -25,8 +29,6 @@ Ruijters.
 
 gpuappmf.c is compiled with gcc, and gpuapp.cu is compiled with nVidia's nvcc compiler. 
 The resulting object files are combined with gcc.
-
-
 
 Input command line arguments:
 
@@ -46,7 +48,8 @@ Input file names are of the form:
 Output file names are of the form:
 [prefix]_[file number]_res.tif, e.g. file_1_res.tif
 
-All output files are in geotiff format by default.
+All output files are in geotiff format by default. The program assumes all input files 
+have the same dimensions.
 
 
 Requires: GDAL, CUDA, and the following libraries:  libgdal and libstdc++.
