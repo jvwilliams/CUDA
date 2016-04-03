@@ -17,8 +17,8 @@ The remaining files are necessary include files.
 The cubic b-spline interpolation routines are by Danny Ruijters, and adapted here for this application.
 
 Input command line arguments:
-
-0) Program (self), not part of the command line arguments\n
+/*
+0) Program (self), not part of the command line arguments
 1) GPU Number
 2) Interpolation Resolution Multiplier
 3) Raster Maximum Data Value
@@ -27,7 +27,7 @@ Input command line arguments:
 6) Input File End
 7) File Prefix
 8) Input File Extension
-
+*/
 Input file names are of the form: 
 [prefix]_[file number].[input file extension], e.g. file_1.tif
 
