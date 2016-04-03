@@ -1,6 +1,6 @@
 # CUDA
 
-This is a small application for opening multiple raster files (any file
+This is a small application for opening multiple raster files (any file 
 type GDAL can open), carrying out a cubic b-spline interpolation on that
 raster, and writing the results.
 
@@ -19,14 +19,14 @@ The cubic b-spline interpolation routines are by Danny Ruijters, and adapted her
 Input command line arguments:
 
 0) Program (self), not part of the command line arguments<br>
-1) GPU Number
-2) Interpolation Resolution Multiplier
-3) Raster Maximum Data Value
-4) Raster Minimum Data Value
-5) Input File Start
-6) Input File End
-7) File Prefix
-8) Input File Extension
+1) GPU Number<br>
+2) Interpolation Resolution Multiplier<br>
+3) Raster Maximum Data Value<br>
+4) Raster Minimum Data Value<br>
+5) Input File Start<br>
+6) Input File End<br>
+7) File Prefix<br>
+8) Input File Extension<br>
 
 Input file names are of the form: 
 [prefix]_[file number].[input file extension], e.g. file_1.tif
