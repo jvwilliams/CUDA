@@ -40,6 +40,7 @@ All output files are in geotiff format by default.
 Requires: GDAL, CUDA, and the following libraries:  libgdal and libstdc++.
 
 Compile instructions and command lines:
+
 nvcc -m64 -O3 -gencode arch=compute_20,code=sm_20 -I/usr/local/cuda-7.5/include -I. -I/usr/local/cuda-7.5/samples/common/inc -I../../code -I../cuda5_fix -o gpuapp.o -c gpuapp.cu
 
 gcc -m64  -O3 -I/usr/local/cuda-7.5/include -I. -I/usr/local/cuda-7.5/samples/common/inc -o cpuappmf.o -c gpuappmf.c
