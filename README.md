@@ -4,17 +4,28 @@ This is a small application for opening multiple raster files (any file
 type GDAL can open), carrying out a cubic b-spline interpolation on that
 raster, and writing the results.
 
-Very little error checking is done in the files.
+Very little error checking is done in the files. The main point was getting 
+the program to compile and work, and work fast.
 
-gpuappmf.c : the main c source file.
+As compared with GDALWarp with three CPU threads, this program is more than 
+65 times faster in carrying out an eightfold cubic spline interpolation with a 
+1440x721 raster when run on two nVidia m2090 GPU's in parallel (two threads 
+called by a test PHP script). The GPU test was likely limited by PCI bus 
+bandwidth and other factors.
+
+The cubic b-spline interpolation routines are by Danny Ruijters, and adapted here for this 
+application. His work may be found at http://www.dannyruijters.nl/cubicinterpolation/ .
+
+gpuappmf.c : the main c source file.<br>
 gpuapp.cu:    the CUDA source file
+
+The remaining files are necessary include files, pared down from the include files by Dr. 
+Ruijters.
 
 gpuappmf.c is compiled with gcc, and gpuapp.cu is compiled with nVidia's nvcc compiler. 
 The resulting object files are combined with gcc.
 
-The remaining files are necessary include files.
 
-The cubic b-spline interpolation routines are by Danny Ruijters, and adapted here for this application.
 
 Input command line arguments:
 
