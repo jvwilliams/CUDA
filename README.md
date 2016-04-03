@@ -13,8 +13,9 @@ As compared with GDALWarp with three CPU threads, this program is more than
 called by a test PHP script). The GPU test was likely limited by PCI bus 
 bandwidth and other factors.
 
-The cubic b-spline interpolation routines are by Danny Ruijters, and adapted here for this 
-application. His work may be found at http://www.dannyruijters.nl/cubicinterpolation/ .
+The cubic b-spline interpolation routines are by Danny Ruijters, and adapted here for 
+this application. His work and further information may be found at 
+http://www.dannyruijters.nl/cubicinterpolation/ .
 
 gpuappmf.c : the main c source file.<br>
 gpuapp.cu:    the CUDA source file
