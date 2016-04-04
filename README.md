@@ -69,3 +69,5 @@ the nvcc compile line for optimal code.
 If using cuda SDK versions other than 7.5, adjust the compile lines accordingly.
 
 The compilation lines above are specifically for 64 bit code.
+
+TODO: go through code and weed out unneeded stuff.
